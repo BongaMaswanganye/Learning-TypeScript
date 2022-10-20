@@ -1,0 +1,96 @@
+<html> 
+<!--This is how you comment in html. the above and below <html> marker is how to start-->
+<!--apparently comments and source code for websites can always be seen so be careful!-->
+    <head> 
+        <!--so head declares "things that aren't directly shown in a webpage",aka meta data-->
+
+        <!--the title is just what its called, the title of all of your meta data-->
+        <title>Bonga's fist website! very exciting! </title>
+
+
+        <!--meta is self contained so it doesn't need a </meta>-->
+        <!--should set a variable author as my name so people know i wrote it-->
+        <meta name = "author" content=" Bonga Maswanganye ">
+
+        <!--should create something called viewport that scales website to most devices-->
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--need to define a character set for something ill find out later-->
+        <meta charset="UTF-8">
+
+        <!--style should allow me to edit details about the website such as color-->
+        <style>
+            body {background-color: darkslategray;}
+            
+
+        </style>
+        <!--below contains some simple css scripts for formatting purposes-->
+        <style>
+            
+            .MainBox{
+                border: 15px black;
+                background-color: deeppink;
+                text-align: center;
+            }
+            .Title{
+                text-align: center;
+                text-shadow: 20px black;
+            }
+            .Button{
+                background-color: aquamarine;
+                color: darkslateblue;
+                padding: 15px 32px;
+            }
+            .Button:hover{
+                background-color: blueviolet;
+                color: gray;
+            }
+            
+    
+
+        </style>
+
+
+        
+    </head>
+
+    <!--where everything that's visible goes-->
+    <body>
+        <!--heading of page-->
+    <div class="Title">
+        <h1>Bonga's first website! very scary!</h1>
+    </div>
+        <!--a div groups things together so i can style them a certain way-->
+    <div class="MainBox">
+        <!--p is a paragraph, it basically holds the contents, the a makes it a hyperlink-->
+        <a href="BabiesFirstWebsite.html"> <p>Pee pee poo poo</p></a>
+
+        <!--images are added like this -->
+        <img src="images/YES.jpg" alt="Absol">
+    </div>
+    
+    <div>
+        <input type="text" id="number" value="0"></input>
+    </div>
+
+    <div>
+        <!--should create button for me to use-->
+        <button class="Button" onclick="increment()">increment</button>
+    </div>
+
+    <!--simple javascript code to increment a number by 1-->
+    <script>
+        function increment(){
+            var holder = document.getElementById('number').value;
+            document.getElementById('number').value = ++holder;
+        }
+
+
+    </script>
+
+
+    </body>
+
+
+
+</html>
