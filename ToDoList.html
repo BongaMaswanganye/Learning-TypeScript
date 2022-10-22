@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <meta name = "author" content=" Bonga Maswanganye ">
+    <link rel="stylesheet" href="ToDoListStyles.css">
+    <!--import fonts here, adding noto japanese and noto serif from google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Serif+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main class = "app">
+        <section class="greeting">
+            <h2 class="title">
+                Test, <input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Please input name here">
+
+            </h2>
+        </section>
+        <section class="create-todo">
+            <h3>create a todo</h3>
+            <form id="New-form">
+                <h4>what would you like to add</h4>
+                <input 
+                type="text" 
+                name="content" 
+                id="content" 
+                placeholder="Please fill in">
+
+                <h4>Select a Category</h4>
+                <div class="options">
+                    <label>
+                        <input 
+                        type="radio" 
+                        name="category" 
+                        id="category1" 
+                        value="Business">
+
+                        <span class="bubble-business"></span>
+                        <div>Business</div>
+                    </label>
+                </div>
+                <div class="options">
+                    <label>
+                        <input 
+                        type="radio" 
+                        name="category" 
+                        id="category1" 
+                        value="Personal">
+
+                        <span class="bubble-Personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
+
+                <input type="submit" value="Add todo">
+            </form>
+
+        </section>
+
+        <section class= "todo-list">
+            <h3>LIST</h3>
+            <div class="list" id="todolist">
+                <div class="Item">
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        <span class="bubble-business"></span>
+                    </label>
+                    <div class="content">
+                        <input type="text" value = "ITEM PLACEHOLDER" readonly>
+
+                    </div>
+
+                    <div class = "actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="ToDoListScripts.ts"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* root places these variables under <html> making them accessible to everything. puts it in root element of tree */
+:root{
+    --Primary : rgb(150, 144, 144);
+    --Secondary : rgb(207, 78, 46);
+    --Business : rgb(43, 41, 41);
+    --Personal : rgb(95, 180, 87); 
+    --Light : rgb(238, 238, 238);
+    --Dark : rgb(47, 47, 83);
+    --danger : rgb(211, 41, 41);
+
+    --shadow: 0 1px 3px rgba(0,0,0,0.2);
+
+    --businessGlow: 0px 0px 4px rgba(43, 41, 41, 0.75);
+    --personalGlow: 0px 0px 4px rgba(95, 180, 87, 0.75); 
+}
+/* Presets*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+
+    /* need to figure out how to access noto serif display later*/
+
+}
+input:not([type="radio"]):not([type = "checkbox"]), button {
+    appearance:none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+body{
+    background:var(--Light);
+    color: var(--Dark);
+}
+section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
