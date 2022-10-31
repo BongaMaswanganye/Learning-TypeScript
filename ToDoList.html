@@ -14,36 +14,45 @@
 
 </head>
 <body>
+    <!--beginning of greeting-->
     <main class = "app">
         <section class="greeting">
             <h2 class="title">
-                Test, <input 
+                Hello, <input 
                         type="text" 
                         id="name" 
                         placeholder="Please input name here">
 
             </h2>
         </section>
+        <!--end of greeting-->
+
+        <!--create a todo-->
         <section class="create-todo">
             <h3>create a todo</h3>
             <form id="New-form">
                 <h4>what would you like to add</h4>
                 <input 
-                type="text" 
-                name="content" 
-                id="content" 
-                placeholder="Please fill in">
+                    type="text" 
+                    name="content" 
+                    id="content" 
+                    placeholder="Please fill in" />
 
+                <!--Category selection-->
                 <h4>Select a Category</h4>
+                
+                <!--grid wouldn't work as expected without test class for some reason need to check why later-->
+                <div class = "test">
+                    <!--actual class options-->
                 <div class="options">
                     <label>
                         <input 
                         type="radio" 
                         name="category" 
                         id="category1" 
-                        value="Business">
+                        value="Business"/>
 
-                        <span class="bubble-business"></span>
+                        <span class="bubble business"></span>
                         <div>Business</div>
                     </label>
                 </div>
@@ -55,10 +64,11 @@
                         id="category1" 
                         value="Personal">
 
-                        <span class="bubble-Personal"></span>
+                        <span class="bubble personal"></span>
                         <div>Personal</div>
                     </label>
                 </div>
+            </div>
 
                 <input type="submit" value="Add todo">
             </form>
@@ -66,15 +76,15 @@
         </section>
 
         <section class= "todo-list">
-            <h3>LIST</h3>
-            <div class="list" id="todolist">
-                <div class="Item">
+            <h3>TODO LIST</h3>
+            <div class="list" id="todo-list">
+               <!-- <div class="Item done">
                     <label>
                         <input type="checkbox" name="" id="">
-                        <span class="bubble-business"></span>
+                        <span class="bubble business"></span>
                     </label>
                     <div class="content">
-                        <input type="text" value = "ITEM PLACEHOLDER" readonly>
+                        <input type="text" value = " PLACEHOLDER" readonly>
 
                     </div>
 
@@ -85,11 +95,28 @@
                     </div>
 
                 </div>
+                <div class="Item">
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        <span class="bubble personal"></span>
+                    </label>
+                    <div class="content">
+                        <input type="text" value = " PLACEHOLDER" readonly>
+
+                    </div>
+
+                    <div class = "actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+
+                    </div>
+
+                </div>-->
             </div>
         </section>
 
     </main>
 
-    <script src="ToDoListScripts.ts"></script>
+    <script src="ALTToDoList.js"></script>
 </body>
 </html>

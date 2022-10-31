@@ -1,8 +1,10 @@
 /* root places these variables under <html> making them accessible to everything. puts it in root element of tree */
+/* css documentation is mostly just describing how it draws stuff using info, 
+not gonna bother commenting here pretty self explanatory */
 :root{
-    --Primary : rgb(150, 144, 144);
+    --Primary : rgb(209, 29, 179);
     --Secondary : rgb(207, 78, 46);
-    --Business : rgb(43, 41, 41);
+    --Business : rgb(49, 31, 153);
     --Personal : rgb(95, 180, 87); 
     --Light : rgb(238, 238, 238);
     --Dark : rgb(47, 47, 83);
@@ -10,8 +12,8 @@
 
     --shadow: 0 1px 3px rgba(0,0,0,0.2);
 
-    --businessGlow: 0px 0px 4px rgba(43, 41, 41, 0.75);
-    --personalGlow: 0px 0px 4px rgba(95, 180, 87, 0.75); 
+    --BusinessGlow: 0px 0px 4px rgba(49, 31, 153, 0.75);
+    --PersonalGlow: 0px 0px 4px rgba(95, 180, 87, 0.75); 
 }
 /* Presets*/
 
@@ -41,4 +43,183 @@ section{
     margin-bottom: 2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+}
+
+h3{
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+h4{
+    color: grey;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 00.5rem;
+}
+
+.greeting .title{
+    display: flex;
+
+}
+.greeting .title input{
+    margin-left: 0.5rem;
+    flex: 1 1 0%;
+    min-width: 0;;
+
+}
+.greeting.title,.greeting.title input{
+    color: var(--Dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.create-todo input[type = "text"]{
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: var(--Dark);
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+
+}
+ .create-todo .test {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.create-todo .options label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: white ;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+input[type = "radio"], input[type = "checkbox"]
+{
+    display: none;
+}
+
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--Business);
+    box-shadow: var(--BusinessGlow);
+}
+
+.bubble.personal{
+    border-color: var(--Personal);
+    box-shadow:var(--PersonalGlow);
+}
+
+.bubble::after{
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: var(--Business) ;
+    box-shadow: var(--BusinessGlow);
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+
+}
+.bubble.personal::after{
+    background-color: var(--Personal);
+    box-shadow:var(--PersonalGlow);
+}
+input:checked ~ .bubble::after{
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+.create-todo .options label div{
+    color: var(--Dark);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+.create-todo input[type = "submit"]{
+    display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    padding: 1rem 1.125rem;
+    color: white;
+    background-color: var(--Primary);
+    border-radius: 00.5rem;
+    box-shadow: var(--PersonalGlow);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.create-todo input[type = "submit"]:hover{
+    opacity: 0.75;
+}
+.todo-list .list {
+    margin:  1rem 0;
+}
+.todo-list .Item{
+    display: flex;
+    align-items:center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.Item label{
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.Item .Content{
+    flex: 1 1 0%;
+
+}
+.Item .Content input{
+    color: var(--Dark);
+    font-size: 1.125rem;
+
+}
+.Item .actions{
+    display: flex;
+    align-items: center;
+}
+.Item .actions button{
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.Item .actions button:hover{
+    opacity: 0.75;
+}
+
+.Item .actions .edit {
+    margin-right: 00.5rem;
+    background-color: var(--Primary);
+}
+.Item .actions .delete {
+    margin-right: 00.5rem;
+    background-color: var(--danger);
+}
+.Item.done .Content input{
+    text-decoration: line-through;
+    color: black;
 }
